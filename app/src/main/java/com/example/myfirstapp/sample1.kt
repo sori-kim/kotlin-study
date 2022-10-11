@@ -166,7 +166,7 @@ fun nullCheck(){
     var nameToUpperCase = name.uppercase() // (O)
     var nullNameToUpperCase = nullName?.uppercase()
 
-    // ?: 엘비스 프레슬리 연산자
+    // ?: 엘비스 연산자
     val lastName : String? = null
     val fullName = name + " " + (lastName?: "No Last name")
     println(fullName)
@@ -178,13 +178,16 @@ fun nullCheck(){
 
 
         val email: String? = "rosie@medility.ai"
+        // email이 null아 아니면? let 함수를 실행해라
+        // let? 자신의 리시버 객체를 람다식 구분 내부로 옮겨서 실행하는 구문
+        // (아래에서는 email이 리시버 객체가 됨. email 대신 it을 사용해도 무방하다)
         email?.let{
-
+                println("my email is ${email}")
         }
     }
 }
 
-// 8.
+
 
 
 
